@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        display: inline-block;
+        margin-left: 15px;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        border-radius: 5%;
+        margin-top: 5%;
+        background-color: antiquewhite;
+      }
+
+      .selected {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div onclick="select(this)">Привет, мир!</div>
+    <div class="card" onclick="select(this)">Карточка 1</div>
+    <div class="card" onclick="select(this)">Карточка 2</div>
+    <div class="card" onclick="select(this)">Карточка 3</div>
+    <script src="/script.js"></script>
+  </body>
+</html>

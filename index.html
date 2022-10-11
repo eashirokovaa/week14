@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="name-task">
+      <label for="username">Ваше имя?</label>
+      <p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Ваше имя?"
+        />
+      </p>
+      <p>
+        <input
+          class="styled"
+          type="button"
+          value="Результат!"
+          id="nameplate"
+          onclick="getName()"
+        />
+      </p>
+    </div>
+    <div class="calc">
+        <h3>Калькулятор</h3>
+      <div class="sum">
+        <input
+          type="text"
+          name="digit1"
+          id="digit1"
+          placeholder="Первое число?"
+        />
+        <button>+</button>
+        <input
+          type="text"
+          name="digit2"
+          id="digit2"
+          placeholder="Второе число?"
+        />
+        <button onclick="calcSum()">=</button>
+        <input
+          type="text"
+          name="result"
+          id="result"
+          placeholder="Результат вычисления"
+        />
+      </div>
+      <div class="subtraction">
+        <input
+          type="text"
+          name="digit3"
+          id="digit3"
+          placeholder="Первое число?"
+        />
+        <button>-</button>
+        <input
+          type="text"
+          name="digit4"
+          id="digit4"
+          placeholder="Второе число?"
+        />
+        <button onclick="calcSubtract()">=</button>
+        <input
+          type="text"
+          name="result1"
+          id="result1"
+          placeholder="Результат вычисления"
+        />
+      </div>
+      <div class="mult">
+        <input
+          type="text"
+          name="digit5"
+          id="digit5"
+          placeholder="Первое число?"
+        />
+        <button>*</button>
+        <input
+          type="text"
+          name="digit6"
+          id="digit6"
+          placeholder="Второе число?"
+        />
+        <button onclick="calcMult()">=</button>
+        <input
+          type="text"
+          name="result2"
+          id="result2"
+          placeholder="Результат вычисления"
+        />
+      </div>
+      <div class="div">
+        <input
+          type="text"
+          name="digit7"
+          id="digit7"
+          placeholder="Первое число?"
+        />
+        <button>/</button>
+        <input
+          type="text"
+          name="digit8"
+          id="digit8"
+          placeholder="Второе число?"
+        />
+        <button onclick="calcDiv()">=</button>
+        <input
+          type="text"
+          name="result3"
+          id="result3"
+          placeholder="Результат вычисления"
+        />
+      </div>
+    </div>
+    <div class="card-scroll">
+        <h3>Карточки с картинками</h3>
+        <div class="card">
+            <button class="btn" onclick="backwardImg()">Назад</button>
+            <img
+              src="https://razdeti.ru/images/photos/medium/article4912.jpg"
+              alt="cat"
+              id="catImage"
+            />
+            <button class="btn" onclick="forwardImg()">Вперед</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

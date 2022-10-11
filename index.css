@@ -1,0 +1,60 @@
+.name-task,
+      .calc, .card-scroll {
+        border: solid black 0.8px;
+        padding: 10px;
+      }
+      .name-task, .calc {
+        margin-bottom: 25px;
+      }
+      .styled {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background-color: rgba(220, 0, 0, 1);
+        background-image: linear-gradient(
+          to top left,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2) 30%,
+          rgba(0, 0, 0, 0)
+        );
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+          inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+      }
+      .card{
+        margin-top: 20px;
+        margin-left: 100px;
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+
+      .сard img {
+        width: 100%;
+        height: auto;
+      }
+      .btn {
+        background-color: rgb(173, 169, 169);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 40px;
+      }
+      .btn:hover {
+        background-color: burlywood;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+      }
+      .sum,
+      .subtraction,
+      .mult,
+      .div {
+        margin-top: 10px;
+      }
