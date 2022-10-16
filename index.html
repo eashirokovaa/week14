@@ -31,94 +31,30 @@
     </div>
     <div class="calc">
         <h3>Калькулятор</h3>
-      <div class="sum">
         <input
           type="text"
           name="digit1"
           id="digit1"
           placeholder="Первое число?"
         />
-        <button>+</button>
         <input
           type="text"
           name="digit2"
           id="digit2"
           placeholder="Второе число?"
         />
-        <button onclick="calcSum()">=</button>
+        <div class="buttons">
+          <button onclick="calcSum()">+</button>
+          <button onclick="calcSubtract()">-</button>
+          <button onclick="calcMult()">*</button>
+          <button onclick="calcDiv()">/</button>
+        </div>
         <input
           type="text"
           name="result"
           id="result"
           placeholder="Результат вычисления"
         />
-      </div>
-      <div class="subtraction">
-        <input
-          type="text"
-          name="digit3"
-          id="digit3"
-          placeholder="Первое число?"
-        />
-        <button>-</button>
-        <input
-          type="text"
-          name="digit4"
-          id="digit4"
-          placeholder="Второе число?"
-        />
-        <button onclick="calcSubtract()">=</button>
-        <input
-          type="text"
-          name="result1"
-          id="result1"
-          placeholder="Результат вычисления"
-        />
-      </div>
-      <div class="mult">
-        <input
-          type="text"
-          name="digit5"
-          id="digit5"
-          placeholder="Первое число?"
-        />
-        <button>*</button>
-        <input
-          type="text"
-          name="digit6"
-          id="digit6"
-          placeholder="Второе число?"
-        />
-        <button onclick="calcMult()">=</button>
-        <input
-          type="text"
-          name="result2"
-          id="result2"
-          placeholder="Результат вычисления"
-        />
-      </div>
-      <div class="div">
-        <input
-          type="text"
-          name="digit7"
-          id="digit7"
-          placeholder="Первое число?"
-        />
-        <button>/</button>
-        <input
-          type="text"
-          name="digit8"
-          id="digit8"
-          placeholder="Второе число?"
-        />
-        <button onclick="calcDiv()">=</button>
-        <input
-          type="text"
-          name="result3"
-          id="result3"
-          placeholder="Результат вычисления"
-        />
-      </div>
     </div>
     <div class="card-scroll">
         <h3>Карточки с картинками</h3>
