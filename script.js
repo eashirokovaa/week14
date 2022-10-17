@@ -4,7 +4,7 @@ function select(sender) {
 
 function getName() {
   let userNameInput = document.getElementById("username").value;
-  document.getElementById("nameplate").value = "Привет, " + userNameInput + '!';
+  document.getElementById("nameplate").value = "Привет, " + userNameInput + "!";
 }
 function calcSum() {
   let digit1 = Number(document.getElementById("digit1").value);
@@ -28,7 +28,9 @@ function calcDiv() {
   let digit1 = Number(document.getElementById("digit1").value);
   let digit2 = Number(document.getElementById("digit2").value);
   sum = digit1 / digit2;
-  document.getElementById("result").value = sum;
+  digit2 == "0"
+    ? alert(`На ноль делить нельзя!!!`)
+    : (document.getElementById("result").value = sum);
 }
 function forwardImg() {
   let changedImg = document.getElementById("catImage");
