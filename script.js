@@ -6,32 +6,47 @@ function getName() {
   let userNameInput = document.getElementById("username").value;
   document.getElementById("nameplate").value = "Привет, " + userNameInput + "!";
 }
-function calcSum() {
-  let digit1 = Number(document.getElementById("digit1").value);
-  let digit2 = Number(document.getElementById("digit2").value);
-  sum = digit1 + digit2;
-  document.getElementById("result").value = sum;
+class Calculation {
+  static calcSum(a, b) {
+    let sum = a + b;
+    document.getElementById("result").value = sum;
+  }
+  static calcSubtract(a,b) {
+    let sum = a - b;
+    document.getElementById("result").value = sum;
+  }
+  static calcMult(a,b) {
+    let sum = a * b;
+    document.getElementById("result").value = sum;
+  }
+  static calcDiv(a,b) {
+    let sum = a / b;
+    b == "0"
+      ? alert(`На ноль делить нельзя!!!`)
+      : (document.getElementById("result").value = sum);
+  }
 }
-function calcSubtract() {
-  let digit1 = Number(document.getElementById("digit1").value);
-  let digit2 = Number(document.getElementById("digit2").value);
-  sum = digit1 - digit2;
-  document.getElementById("result").value = sum;
-}
-function calcMult() {
-  let digit1 = Number(document.getElementById("digit1").value);
-  let digit2 = Number(document.getElementById("digit2").value);
-  sum = digit1 * digit2;
-  document.getElementById("result").value = sum;
-}
-function calcDiv() {
-  let digit1 = Number(document.getElementById("digit1").value);
-  let digit2 = Number(document.getElementById("digit2").value);
-  sum = digit1 / digit2;
-  digit2 == "0"
-    ? alert(`На ноль делить нельзя!!!`)
-    : (document.getElementById("result").value = sum);
-}
+document.getElementById("sum").onclick = function () {
+  let a = Number(document.getElementById("digit1").value);
+  let b = Number(document.getElementById("digit2").value);
+  Calculation.calcSum(a, b);
+};
+document.getElementById("subtract").onclick = function () {
+  let a = Number(document.getElementById("digit1").value);
+  let b = Number(document.getElementById("digit2").value);
+  Calculation.calcSubtract(a, b);
+};
+document.getElementById("mult").onclick = function () {
+  let a = Number(document.getElementById("digit1").value);
+  let b = Number(document.getElementById("digit2").value);
+  Calculation.calcMult(a, b);
+};
+document.getElementById("div").onclick = function () {
+  let a = Number(document.getElementById("digit1").value);
+  let b = Number(document.getElementById("digit2").value);
+  Calculation.calcDiv(a, b);
+};
+
 function forwardImg() {
   let changedImg = document.getElementById("catImage");
   if (

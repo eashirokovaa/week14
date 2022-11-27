@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
@@ -30,43 +33,43 @@
       </p>
     </div>
     <div class="calc">
-        <h3>Калькулятор</h3>
-        <input
-          type="text"
-          name="digit1"
-          id="digit1"
-          placeholder="Первое число?"
-        />
-        <input
-          type="text"
-          name="digit2"
-          id="digit2"
-          placeholder="Второе число?"
-        />
-        <div class="buttons">
-          <button onclick="calcSum()">+</button>
-          <button onclick="calcSubtract()">-</button>
-          <button onclick="calcMult()">*</button>
-          <button onclick="calcDiv()">/</button>
-        </div>
-        <input
-          type="text"
-          name="result"
-          id="result"
-          placeholder="Результат вычисления"
-        />
+      <h3>Калькулятор</h3>
+      <input
+        type="text"
+        name="digit1"
+        id="digit1"
+        placeholder="Первое число?"
+      />
+      <input
+        type="text"
+        name="digit2"
+        id="digit2"
+        placeholder="Второе число?"
+      />
+      <div class="buttons">
+        <button id="sum">+</button>
+        <button id="subtract">-</button>
+        <button id="mult">*</button>
+        <button id="div">/</button>
+      </div>
+      <input
+        type="text"
+        name="result"
+        id="result"
+        placeholder="Результат вычисления"
+      />
     </div>
     <div class="card-scroll">
-        <h3>Карточки с картинками</h3>
-        <div class="card">
-            <button class="btn" onclick="backwardImg()">Назад</button>
-            <img
-              src="https://razdeti.ru/images/photos/medium/article4912.jpg"
-              alt="cat"
-              id="catImage"
-            />
-            <button class="btn" onclick="forwardImg()">Вперед</button>
-        </div>
+      <h3>Карточки с картинками</h3>
+      <div class="card">
+        <button class="btn" onclick="backwardImg()">Назад</button>
+        <img
+          src="https://razdeti.ru/images/photos/medium/article4912.jpg"
+          alt="cat"
+          id="catImage"
+        />
+        <button class="btn" onclick="forwardImg()">Вперед</button>
+      </div>
     </div>
     <script src="/script.js"></script>
   </body>
