@@ -6,45 +6,40 @@ function getName() {
   let userNameInput = document.getElementById("username").value;
   document.getElementById("nameplate").value = "Привет, " + userNameInput + "!";
 }
+
 class Calculation {
   static calcSum(a, b) {
     let sum = a + b;
     document.getElementById("result").value = sum;
   }
-  static calcSubtract(a,b) {
+  static calcSubtract(a, b) {
     let sum = a - b;
     document.getElementById("result").value = sum;
   }
-  static calcMult(a,b) {
+  static calcMult(a, b) {
     let sum = a * b;
     document.getElementById("result").value = sum;
   }
-  static calcDiv(a,b) {
+  static calcDiv(a, b) {
     let sum = a / b;
     b == "0"
       ? alert(`На ноль делить нельзя!!!`)
       : (document.getElementById("result").value = sum);
   }
 }
+let digit1 = document.getElementById("digit1");
+let digit2 = document.getElementById("digit2");
 document.getElementById("sum").onclick = function () {
-  let a = Number(document.getElementById("digit1").value);
-  let b = Number(document.getElementById("digit2").value);
-  Calculation.calcSum(a, b);
+  Calculation.calcSum(Number(digit1.value), Number(digit2.value));
 };
 document.getElementById("subtract").onclick = function () {
-  let a = Number(document.getElementById("digit1").value);
-  let b = Number(document.getElementById("digit2").value);
-  Calculation.calcSubtract(a, b);
+  Calculation.calcSubtract(Number(digit1.value), Number(digit2.value));
 };
 document.getElementById("mult").onclick = function () {
-  let a = Number(document.getElementById("digit1").value);
-  let b = Number(document.getElementById("digit2").value);
-  Calculation.calcMult(a, b);
+  Calculation.calcMult(Number(digit1.value), Number(digit2.value));
 };
 document.getElementById("div").onclick = function () {
-  let a = Number(document.getElementById("digit1").value);
-  let b = Number(document.getElementById("digit2").value);
-  Calculation.calcDiv(a, b);
+  Calculation.calcDiv(Number(digit1.value), Number(digit2.value));
 };
 
 function forwardImg() {
