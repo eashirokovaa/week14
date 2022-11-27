@@ -9,37 +9,49 @@ function getName() {
 
 class Calculation {
   static calcSum(a, b) {
-    let sum = a + b;
-    document.getElementById("result").value = sum;
+    return a + b;
   }
   static calcSubtract(a, b) {
-    let sum = a - b;
-    document.getElementById("result").value = sum;
+    return a - b;
   }
   static calcMult(a, b) {
-    let sum = a * b;
-    document.getElementById("result").value = sum;
+    return a * b;
   }
   static calcDiv(a, b) {
-    let sum = a / b;
-    b == "0"
-      ? alert(`На ноль делить нельзя!!!`)
-      : (document.getElementById("result").value = sum);
+    return a / b;
   }
 }
 let digit1 = document.getElementById("digit1");
 let digit2 = document.getElementById("digit2");
 document.getElementById("sum").onclick = function () {
-  Calculation.calcSum(Number(digit1.value), Number(digit2.value));
+  const result = Calculation.calcSum(
+    Number(digit1.value),
+    Number(digit2.value)
+  );
+  document.getElementById("result").value = result;
 };
 document.getElementById("subtract").onclick = function () {
-  Calculation.calcSubtract(Number(digit1.value), Number(digit2.value));
+  const result = Calculation.calcSubtract(
+    Number(digit1.value),
+    Number(digit2.value)
+  );
+  document.getElementById("result").value = result;
 };
 document.getElementById("mult").onclick = function () {
-  Calculation.calcMult(Number(digit1.value), Number(digit2.value));
+  const result = Calculation.calcMult(
+    Number(digit1.value),
+    Number(digit2.value)
+  );
+  document.getElementById("result").value = result;
 };
 document.getElementById("div").onclick = function () {
-  Calculation.calcDiv(Number(digit1.value), Number(digit2.value));
+  const result = Calculation.calcDiv(
+    Number(digit1.value),
+    Number(digit2.value)
+  );
+  Number(digit2.value) == "0"
+    ? alert(`На ноль делить нельзя!!!`)
+    : (document.getElementById("result").value = result);
 };
 
 function forwardImg() {
