@@ -21,39 +21,26 @@ class Calculation {
     return a / b;
   }
 }
-let digit1 = document.getElementById("digit1");
-let digit2 = document.getElementById("digit2");
-document.getElementById("sum").onclick = function () {
-  const result = Calculation.calcSum(
-    Number(digit1.value),
-    Number(digit2.value)
-  );
-  document.getElementById("result").value = result;
-};
-document.getElementById("subtract").onclick = function () {
-  const result = Calculation.calcSubtract(
-    Number(digit1.value),
-    Number(digit2.value)
-  );
-  document.getElementById("result").value = result;
-};
-document.getElementById("mult").onclick = function () {
-  const result = Calculation.calcMult(
-    Number(digit1.value),
-    Number(digit2.value)
-  );
-  document.getElementById("result").value = result;
-};
-document.getElementById("div").onclick = function () {
-  const result = Calculation.calcDiv(
-    Number(digit1.value),
-    Number(digit2.value)
-  );
-  Number(digit2.value) == "0"
-    ? alert(`На ноль делить нельзя!!!`)
-    : (document.getElementById("result").value = result);
-};
-
+function calcResult(operation) {
+  const a = Number(document.getElementById("digit1").value);
+  const b = Number(document.getElementById("digit2").value);
+  let result = null;
+  switch (operation) {
+    case "plus":
+      result = Calculation.calcSum(a, b);
+      break;
+    case "minus":
+      result = Calculation.calcSubtract(a, b);
+      break;
+    case "mult":
+      result = Calculation.calcMult(a, b);
+      break;
+    case "div":
+      b == "0" ? alert("на ноль делить нельзя!") : result = Calculation.calcDiv(a, b);
+      break;
+  }
+  document.getElementById("result").value = result
+}
 function forwardImg() {
   let changedImg = document.getElementById("catImage");
   if (
